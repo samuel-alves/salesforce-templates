@@ -1,0 +1,1 @@
+SELECT Id, CronJobDetail.Id, CronJobDetail.Name, CronJobDetail.JobType FROM CronTrigger ORDER BY CreatedDate ASC LIMIT 10

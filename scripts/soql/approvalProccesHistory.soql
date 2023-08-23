@@ -1,0 +1,2 @@
+SELECT Id, (SELECT Id, StepStatus,Actor.Name, Comments FROM StepsAndWorkitems where StepStatus = 'Pending')
+FROM ProcessInstance
