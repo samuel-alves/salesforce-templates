@@ -2,7 +2,7 @@
  * @description       :
  * @author            : samuelalves@loba.pt
  * @group             :
- * @last modified on  : 2022-01-07
+ * @last modified on  : 2022-12-07
  * @last modified by  : samuelalves@loba.pt
 **/
 @IsTest
@@ -23,5 +23,12 @@ public without sharing class SObjectUtilsTest {
         String[] values = new String[]{'1'};
         System.assert(SObjectUtils.parseIntArrayElement(values, 0) == 1);
         System.assert(SObjectUtils.parseIntArrayElement(values, 1) == null);
+    }
+
+    @IsTest
+    static void blankOrZero() {
+        String[] values = new String[]{'1'};
+        System.assert(SObjectUtils.blankOrZero(null) == true);
+        System.assert(SObjectUtils.blankOrZero(1) == false);
     }
 }

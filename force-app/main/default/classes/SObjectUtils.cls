@@ -2,7 +2,7 @@
  * @description       :
  * @author            : samuelalves@loba.pt
  * @group             :
- * @last modified on  : 2022-01-07
+ * @last modified on  : 2022-12-07
  * @last modified by  : samuelalves@loba.pt
 **/
 public without sharing class SObjectUtils {
@@ -57,5 +57,8 @@ public without sharing class SObjectUtils {
         } catch(Exception ex) {
             return null;
         }
+    }
+    public static Boolean blankOrZero(Decimal value) {
+        return value == null || value == 0;
     }
 }
