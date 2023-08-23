@@ -8,6 +8,14 @@
     {
       "files": "*.{cmp,page,component}",
       "options": { "parser": "html" }
+    },
+    {
+      "files": "*.{cls,trigger,apex}",
+      "options": {
+        "tabWidth": 4,
+        "proseWrap": "preserve",
+        "printWidth": 160
+      }
     }
   ]
 }
