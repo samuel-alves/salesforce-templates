@@ -20,6 +20,6 @@ public void changeRepositoryName(String repName, String oldName, String newName)
     System.debug(JSON.serialize(repos[0]));
 
     List<sf_devops__Vcs_Event__c> events = [SELECT Id, sf_devops__Payload__c FROM sf_devops__Vcs_Event__c WHERE sf_devops__Repository__c = :repos[0].Id];
-    events[0].sf_devops__Payload__c = events[0].sf_devops__Payload__c.replaceAll(oldName, oldName);
+    events[0].sf_devops__Payload__c = events[0].sf_devops__Payload__c.replaceAll(oldName, newName);
     update events;
 }
