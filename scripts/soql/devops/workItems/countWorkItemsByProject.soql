@@ -1,0 +1,1 @@
+SELECT sf_devops__Project__r.Name, COUNT(Id) FROM sf_devops__Work_Item__c GROUP BY sf_devops__Project__r.Name

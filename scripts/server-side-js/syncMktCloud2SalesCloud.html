@@ -1,0 +1,40 @@
+<!--
+    Push Data Extension records into Salesforce CRM custom object
+    https://salesforce.stackexchange.com/questions/298803/push-data-extension-records-into-salesforce-crm-custom-object
+ -->
+<script runat="server">
+    Platform.Load("Core","1.1.1");
+
+    var records = DataExtension.Init("recordsToUpdate");
+    var data = records.Rows.Retrieve({Property:"flag",SimpleOperator:"equals",Value:0});
+    var datalength = data.length;
+
+    for (var i = 0 ; i < data.length ; i ++) {
+        var sf_fieldUpdateString = [];
+        sf_fieldUpdateString.push('ID__c');
+        sf_fieldUpdateString.push(data[i].ID);
+        sf_fieldUpdateString.push('datafield__c');
+        sf_fieldUpdateString.push(data[i].datafield);
+
+        var updateSFObject = "";
+        updateSFObject += "\%\%[ ";
+        updateSFObject += "set @salesforceFields = CreateSalesforceObject('fromSFMC__c',2,";
+        updateSFObject += "'" +  sf_fieldUpdateString.join("','") + "'";
+        updateSFObject += ") ";
+        updateSFObject += "output(concat(@salesforceFields)) ";
+        updateSFObject += "]\%\%";
+        var idToUpdate = data[i].ID;
+
+        try {
+
+          results = Platform.Function.TreatAsContent(updateSFObject);
+          var processing = records.Rows.Update({flag:'1'}, ['ID'], [idToUpdate]);
+
+        } catch (e) {
+
+          if (debug) { Write("<br>updateSF error: " + Stringify(e)); }
+
+        }
+
+    }
+    </script>

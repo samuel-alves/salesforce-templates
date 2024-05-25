@@ -1,0 +1,8 @@
+IF (
+    (
+        (DATE(YEAR(TODAY()),3,31) - MOD(DATE(YEAR(TODAY()),3,31) - DATE(1900,1,7),7)) <= DataSessao__c &&
+        DataSessao__c < (DATE(YEAR(TODAY()),10,31) - MOD(DATE(YEAR(TODAY()),10,31) - DATE(1900,1,7),7))
+    ),
+    TIMEVALUE(MyDateTime__c + 60*(1/24/60)),
+    TIMEVALUE(MyDateTime__c)
+)
