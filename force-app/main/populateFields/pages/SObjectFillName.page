@@ -1,0 +1,9 @@
+<!--
+  @description       : Auto Populate fields while creating a new record in Salesforce / Visualforce
+  @url               : https://gist.github.com/cdeckert/4030458
+  @author            : samuelalves@loba.com
+  @group             :
+  @last modified on  : 2024-07-01
+  @last modified by  : samuelalves@loba.com
+-->
+<apex:page standardController="MyObject__c" extensions="SObjectFillNameController" action="{!redirect}"></apex:page>
