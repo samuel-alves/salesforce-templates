@@ -1,13 +1,13 @@
 /**
  * @File Name          : FileUtils.cls
  * @Description        :
- * @Author             : samuelalves@loba.pt
+ * @Author             : unknown
  * @Group              :
- * @Last Modified By   : samuelalves@loba.pt
+ * @Last Modified By   : unknown
  * @Last Modified On   : 3/2/2020, 4:30:12 PM
  * @Modification Log   :
  * Ver       Date            Author      		    Modification
- * 1.0    3/2/2020   samuelalves@loba.pt     Initial Version
+ * 1.0    3/2/2020   unknown     Initial Version
 **/
 public class FileUtils {
 

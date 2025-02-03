@@ -3,10 +3,10 @@
  * @description       : 3 ways to work with custom settings in an Apex unit test
  * https://www.joelemmer.com/custom-settings-in-salesforce-apex-unit-tests/
  *
- * @author            : samuelalves@loba.pt
+ * @author            : unknown
  * @group             :
  * @last modified on  : 2023-01-02
- * @last modified by  : samuelalves@loba.pt
+ * @last modified by  : unknown
 **/
 
 

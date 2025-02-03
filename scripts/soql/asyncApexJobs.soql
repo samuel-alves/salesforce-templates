@@ -2,3 +2,4 @@ SELECT Id, ApexClassId, ApexClass.Name, JobItemsProcessed, JobType,
        Status, NumberOfErrors, MethodName, CreatedDate, CompletedDate, CronTrigger.NextFireTime, CronTrigger.EndTime
 FROM AsyncApexJob
 WHERE JobType in ('BatchApexWorker','ScheduledApex')
+AND ApexClass.Name IN ('MyBatchClass','MyScheduleClass')

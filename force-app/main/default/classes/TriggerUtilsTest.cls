@@ -1,9 +1,9 @@
 /**
  * @description       :
- * @author            : samuelalves@loba.pt
+ * @author            : unknown
  * @group             :
  * @last modified on  : 2022-07-11
- * @last modified by  : samuelalves@loba.pt
+ * @last modified by  : unknown
 **/
 @IsTest
 public class TriggerUtilsTest {

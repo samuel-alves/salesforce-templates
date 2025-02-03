@@ -1,25 +1,25 @@
 /**
  * @File Name          : AWSCommon.cls
- * @Description        : 
- * @Author             : samuel.f.alves@outlook.com
- * @Group              : 
- * @Last Modified By   : samuel.f.alves@outlook.com
+ * @Description        :
+ * @Author             : unknown
+ * @Group              :
+ * @Last Modified By   : unknown
  * @Last Modified On   : 11/22/2019, 5:41:24 PM
- * @Modification Log   : 
+ * @Modification Log   :
  * Ver       Date            Author      		    Modification
- * 1.0    11/19/2019   samuel.f.alves@outlook.com     Initial Version
+ * 1.0    11/19/2019   unknown     Initial Version
 **/
 public without sharing class AwsCommon {
-	
+
     /**
-    * @description 
-    * @author samuel.f.alves@outlook.com | 11/20/2019 
-    * @param String method 
-    * @param String parameters 
-    * @param String host 
-    * @param Datetime xAmzDate 
-    * @return String 
-	* 
+    * @description
+    * @author unknown | 11/20/2019
+    * @param String method
+    * @param String parameters
+    * @param String host
+    * @param Datetime xAmzDate
+    * @return String
+	*
 	* Note: @parameters must be alphabetically ordered
     **/
     public static String getCanonicUrl(String method, String parameters, String host, Datetime xAmzDate){
@@ -33,16 +33,16 @@ public without sharing class AwsCommon {
 		canonicalUrl += 'x-amz-date:' + xAmzDateStr + '\n' ;
 		canonicalUrl += '\nhost;x-amz-date\n' ;	// Signed headers
 		canonicalUrl += 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'; // empty body hash
-	
+
 		return canonicalUrl;
 	}
-	
+
 	/**
-	* @description 
-	* @author samuel.f.alves@outlook.com | 11/20/2019 
-	* @param Datetime xAmzDate 
-	* @param String canonicalUrlHash 
-	* @return String 
+	* @description
+	* @author unknown | 11/20/2019
+	* @param Datetime xAmzDate
+	* @param String canonicalUrlHash
+	* @return String
 	**/
 	public static String getStringToSign(Datetime xAmzDate, String canonicalUrlHash) {
 		String xAmzDatetimeStr = xAmzDate.formatGMT('YYYYMMdd\'T\'HHmmss\'Z\'');
@@ -58,13 +58,13 @@ public without sharing class AwsCommon {
 	}
 
 	/**
-	* @description 
-	* @author samuel.f.alves@outlook.com | 11/20/2019 
-	* @param String key 
-	* @param String dateStamp 
-	* @param String regionName 
-	* @param String serviceName 
-	* @return Blob 
+	* @description
+	* @author unknown | 11/20/2019
+	* @param String key
+	* @param String dateStamp
+	* @param String regionName
+	* @param String serviceName
+	* @return Blob
 	**/
 	public static Blob getSignatureKey(String key, String dateStamp, String regionName, String serviceName) {
 		String kSecret = 'AWS4' + key;
@@ -77,21 +77,21 @@ public without sharing class AwsCommon {
 	}
 
     /**
-    * @description 
-    * @author samuel.f.alves@outlook.com | 11/20/2019 
-    * @param String input 
-    * @return String 
+    * @description
+    * @author unknown | 11/20/2019
+    * @param String input
+    * @return String
     **/
     public static String sha256(String input) {
         return EncodingUtil.convertToHex(Crypto.generateDigest('SHA256', Blob.valueOf(input)));
     }
 
     /**
-    * @description 
-    * @author samuel.f.alves@outlook.com | 11/20/2019 
-    * @param Blob messageToSign 
-    * @param Blob signatureKey 
-    * @return String 
+    * @description
+    * @author unknown | 11/20/2019
+    * @param Blob messageToSign
+    * @param Blob signatureKey
+    * @return String
     **/
     public static String hmacSha256(Blob messageToSign, Blob signatureKey) {
         return EncodingUtil.convertToHex(Crypto.generateMac('hmacSHA256', messageToSign, signatureKey));

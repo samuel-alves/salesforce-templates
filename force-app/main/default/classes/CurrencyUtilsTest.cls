@@ -1,9 +1,9 @@
 /**
  * @description       :
- * @author            : samuelalves@loba.com
+ * @author            : unknown
  * @group             :
- * @last modified on  : 2024-03-20
- * @last modified by  : samuelalves@loba.com
+ * @last modified on  : 2025-02-03
+ * @last modified by  : unknown
 **/
 @isTest
 public class CurrencyUtilsTest {

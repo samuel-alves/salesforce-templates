@@ -1,13 +1,13 @@
 /**
  * @File Name          : AwsConfigurations.cls
- * @Description        : 
- * @Author             : samuel.f.alves@outlook.com
- * @Group              : 
- * @Last Modified By   : samuel.f.alves@outlook.com
+ * @Description        :
+ * @Author             : unknown
+ * @Group              :
+ * @Last Modified By   : unknown
  * @Last Modified On   : 11/22/2019, 5:41:24 PM
- * @Modification Log   : 
+ * @Modification Log   :
  * Ver       Date            Author      		    Modification
- * 1.0    11/22/2019   samuel.f.alves@outlook.com     Initial Version
+ * 1.0    11/22/2019   unknown     Initial Version
 **/
 public class AwsConfigurations {
     // IAM User credentials
@@ -27,7 +27,7 @@ public class AwsConfigurations {
 
     // duration in seconds (e.g, 3600)
     public Integer StsSessionTokenDuration;
-    
+
     // https://sts.amazonaws.com
     public String StsEndpoint;
 
@@ -36,10 +36,10 @@ public class AwsConfigurations {
 
     // S3 Bucket region
     public String S3Region; //eu-central-1
-    
+
     // https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html
     public String S3CannedAcl; // "authenticated-read"
-    
+
     // Template to create S3 object link
     // https://{{BUCKET_NAME}}.s3.{{BUCKET_REGION}}.amazonaws.com/{{FILE_NAME}}
     public String S3UrlStringTemplate;

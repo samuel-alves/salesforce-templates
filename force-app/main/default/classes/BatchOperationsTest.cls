@@ -1,13 +1,13 @@
 /**
  * @File Name          : BatchOperationsTest.cls
- * @Description        : 
- * @Author             : samuelalves@loba.pt
- * @Group              : 
- * @Last Modified By   : samuelalves@loba.pt
+ * @Description        :
+ * @Author             : unknown
+ * @Group              :
+ * @Last Modified By   : unknown
  * @Last Modified On   : 11/14/2019, 9:25:27 PM
- * @Modification Log   : 
+ * @Modification Log   :
  * Ver       Date            Author      		    Modification
- * 1.0    11/14/2019   samuelalves@loba.pt     Initial Version
+ * 1.0    11/14/2019   unknown     Initial Version
 **/
 @IsTest
 private without sharing class BatchOperationsTest {
@@ -27,7 +27,7 @@ private without sharing class BatchOperationsTest {
         Map<String, Object> newValues = new Map<String, Object>();
         newValues.put('LastName', 'test2');
 
-        Test.startTest(); 
+        Test.startTest();
         Database.executeBatch(new BatchOperations(query, operation, newValues, null));
 
         String sch = '0 0 * * * ?';
@@ -55,7 +55,7 @@ private without sharing class BatchOperationsTest {
         String operation = 'delete';
         Map<String, Object> newValues = new Map<String, Object>();
 
-        Test.startTest(); 
+        Test.startTest();
         Database.executeBatch(new BatchOperations(query, operation, newValues, null));
 
         Test.stopTest();

@@ -1,14 +1,14 @@
 /**
  * @description       :
- * @author            : samuelalves@loba.pt
+ * @author            : unknown
  * @group             :
  * @last modified on  : 2022-12-07
- * @last modified by  : samuelalves@loba.pt
+ * @last modified by  : unknown
 **/
 public without sharing class SObjectUtils {
     /**
     * coalesce returns first non-null value in list
-    * @author samuelalves@loba.pt | 2022-01-06
+    * @author unknown | 2022-01-06
     * @param List<Decimal> values
     * @return Decimal
     **/
@@ -23,7 +23,7 @@ public without sharing class SObjectUtils {
     * Nz function lets you return a value when a variant is null
     * (microsoft access function)
     * https://support.microsoft.com/en-us/office/nz-function-8ef85549-cc9c-438b-860a-7fd9f4c69b6c
-    * @author samuelalves@loba.pt | 2022-01-06
+    * @author unknown | 2022-01-06
     * @param Decimal variant
     * @param Decimal valueIfNull
     * @return Decimal
@@ -36,7 +36,7 @@ public without sharing class SObjectUtils {
     * Nz function lets you return 0 (zero) when a variant is null
     * (microsoft access function)
     * https://support.microsoft.com/en-us/office/nz-function-8ef85549-cc9c-438b-860a-7fd9f4c69b6c
-    * @author samuelalves@loba.pt | 2022-01-06
+    * @author unknown | 2022-01-06
     * @param Decimal variant
     * @return Decimal
     **/
@@ -46,7 +46,7 @@ public without sharing class SObjectUtils {
 
     /**
     * Integer value of array element at a specific position
-    * @author samuelalves@loba.pt | 2022-01-07
+    * @author unknown | 2022-01-07
     * @param String[] values    List of value
     * @param Integer position   List position to parse
     * @return Integer

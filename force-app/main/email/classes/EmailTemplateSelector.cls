@@ -2,8 +2,8 @@
  * @description       : Email Template Selector
  * @author            : https://smukov.github.io/blog/2019/11/24/Automatic-Email-Template-Selection-in-Case-Feed/
  * @group             :
- * @last modified on  : 2024-03-07
- * @last modified by  : samuelalves@loba.com
+ * @last modified on  : 2025-02-03
+ * @last modified by  : unknown
 **/
 global class EmailTemplateSelector implements QuickAction.QuickActionDefaultsHandler {
   global EmailTemplateSelector() { }

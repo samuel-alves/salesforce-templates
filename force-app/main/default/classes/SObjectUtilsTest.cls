@@ -1,9 +1,9 @@
 /**
  * @description       :
- * @author            : samuelalves@loba.pt
+ * @author            : unknown
  * @group             :
  * @last modified on  : 2022-12-07
- * @last modified by  : samuelalves@loba.pt
+ * @last modified by  : unknown
 **/
 @IsTest
 public without sharing class SObjectUtilsTest {

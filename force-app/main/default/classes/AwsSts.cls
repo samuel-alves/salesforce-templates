@@ -1,13 +1,13 @@
 /**
  * @File Name          : AwsSts.cls
  * @Description        :
- * @Author             : samuel.f.alves@outlook.com
+ * @Author             : unknown
  * @Group              :
- * @Last Modified By   : samuel.f.alves@outlook.com
+ * @Last Modified By   : unknown
  * @Last Modified On   : 11/22/2019, 5:41:24 PM
  * @Modification Log   :
  * Ver       Date            Author      		    Modification
- * 1.0    11/19/2019   samuel.f.alves@outlook.com     Initial Version
+ * 1.0    11/19/2019   unknown     Initial Version
  **/
 public without sharing class AwsSts {
     private static AwsConfigurations awsConfigurations;
@@ -31,7 +31,7 @@ public without sharing class AwsSts {
         String host = getAwsConfigurations().StsHost; // 'sts.amazonaws.com';
         String region = getAwsConfigurations().StsRegion; // 'us-east-1';
         Integer tokenDuration = (Integer) getAwsConfigurations().StsSessionTokenDuration; // 1800
-        
+
         // Endpoint
         String endpoint = 'https://' + host; //getAwsConfigurations().StsEndpoint;
         String endpointParams = 'Action=GetSessionToken&DurationSeconds=' + tokenDuration + '&Version=2011-06-15';

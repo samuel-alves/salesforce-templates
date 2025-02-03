@@ -1,13 +1,13 @@
 /**
  * @File Name          : XMLParser.cls
  * @Description        : An utility class to parse XML and create the equivalent JSON
- * @Author             : samuel.f.alves@outlook.com
- * @Group              : 
- * @Last Modified By   : samuel.f.alves@outlook.com
+ * @Author             : unknown
+ * @Group              :
+ * @Last Modified By   : unknown
  * @Last Modified On   : 11/22/2019, 5:41:24 PM
- * @Modification Log   : 
+ * @Modification Log   :
  * Ver       Date            Author      		    Modification
- * 1.0    11/19/2019   samuel.f.alves@outlook.com     Initial Version
+ * 1.0    11/19/2019   unknown     Initial Version
 **/
 public class XmlParser {
 

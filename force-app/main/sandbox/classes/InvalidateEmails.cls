@@ -3,10 +3,10 @@
  * References:
  * - https://www.soliantconsulting.com/blog/salesforce-sandboxpostcopy/
  * - https://gist.github.com/krystiancharubin/9a8376fe664af0117562
- * @author            : samuelalves@loba.pt
+ * @author            : unknown
  * @group             :
  * @last modified on  : 2023-01-04
- * @last modified by  : samuelalves@loba.pt
+ * @last modified by  : unknown
  **/
 global class InvalidateEmails implements SandboxPostCopy {
     global void runApexClass(SandboxContext context) {

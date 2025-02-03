@@ -2,10 +2,10 @@
  * @description       : Assign Permission Set To Users In Apex Salesforce
  * https://www.levelupsalesforce.com/assign-permission-set-to-users-in-apex-salesforce
  *
- * @author            : samuelalves@loba.pt
+ * @author            : unknown
  * @group             :
  * @last modified on  : 2023-01-02
- * @last modified by  : samuelalves@loba.pt
+ * @last modified by  : unknown
 **/
 
 public static void assignPermissionSet(Users[] users) {

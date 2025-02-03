@@ -1,0 +1,11 @@
+/**
+ * @description       :
+ * @author            : unknown
+ * @group             :
+ * @last modified on  : 2025-02-03
+ * @last modified by  : unknown
+**/
+SELECT Id, ApexClassId, ApexClass.Name, JobItemsProcessed, JobType,
+       Status, NumberOfErrors, MethodName, CreatedDate, CompletedDate, CronTrigger.StartTime, CronTrigger.PreviousFireTime, CronTrigger.NextFireTime, CronTrigger.EndTime, CronTrigger.State, CronTrigger.CronExpression, CronTrigger.TimeZoneSidKey, CronTrigger.TimesTriggered, CronTrigger.CreatedDate, CronTrigger.OwnerId, CreatedBy.Name
+FROM AsyncApexJob
+WHERE CronTrigger.NextFireTime != null
